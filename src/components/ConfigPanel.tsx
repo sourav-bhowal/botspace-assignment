@@ -14,7 +14,7 @@ export default function ConfigPanel() {
         {currentStep >= 1 && <ConfigCommentView />}
         {currentStep >= 2 && <ConfigDMView />}
       </div>
-      <div className="mt-8">
+      <div className="">
         <NextButton onClick={nextStep} />
       </div>
     </div>
