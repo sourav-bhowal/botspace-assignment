@@ -5,7 +5,10 @@ import Image from "next/image";
 import { RadioOption } from "../ui/Radio";
 
 export default function ConfigPostView() {
+  // Access the post store to get posts, selectPost function, and selectedPostId
   const { posts, selectPost, selectedPostId } = usePostStore();
+
+  // State to manage the selected option for post or reel
   const [selectedOption, setSelectedOption] = useState("specific");
 
   return (

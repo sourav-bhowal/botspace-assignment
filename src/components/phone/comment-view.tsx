@@ -3,7 +3,11 @@ import { MoreHorizontal, Heart, Plus } from "lucide-react";
 import Image from "next/image";
 
 export default function CommentView() {
+
+  // Access the post store to get the current post and comment type
   const { post } = usePostStore();
+
+  // Fallbacks for post properties
   const commentType = post.commentType || "specific";
 
   return (

@@ -9,6 +9,8 @@ import {
 import Image from "next/image";
 
 export default function PostView() {
+
+  // Access the post store to get the current post
   const { post } = usePostStore();
 
   return (

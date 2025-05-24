@@ -1,4 +1,4 @@
-import { SAMPLE_POSTS } from "@/data/data";
+import { SAMPLE_POSTS } from "@/lib/data";
 import { PostState } from "@/types/type";
 import { create } from "zustand";
 

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 
+// Interface for the props of the PreviewTabs component
 interface PreviewTabsProps {
   activeView: string;
   onChange: (view: string) => void;
@@ -9,6 +10,8 @@ export default function PreviewTabs({
   activeView,
   onChange,
 }: PreviewTabsProps) {
+
+  // Define the tabs with their ids and labels
   const tabs = [
     { id: "post", label: "Post" },
     { id: "comments", label: "Comments" },

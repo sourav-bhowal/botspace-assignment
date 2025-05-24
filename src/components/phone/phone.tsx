@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 
 export default function PhonePreview() {
+
+  // Access the active view from the post store
   const { activeView } = usePostStore();
 
   return (

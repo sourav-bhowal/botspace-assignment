@@ -4,6 +4,8 @@ import { ChevronLeft, Phone, Video, PlusCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function DirectMessageView() {
+
+  // Access the post store to get the current post and its direct messages
   const { post } = usePostStore();
 
   return (

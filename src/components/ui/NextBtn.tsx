@@ -6,7 +6,11 @@ interface NextButtonProps {
 }
 
 export function NextButton({ onClick }: NextButtonProps) {
+
+  // Access the current step from the post store
   const { currentStep } = usePostStore();
+
+  // Determine if this is the last step (assuming 3 steps total, indexed from 0)
   const isLastStep = currentStep >= 2;
 
   return (

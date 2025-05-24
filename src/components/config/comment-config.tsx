@@ -4,13 +4,17 @@ import { RadioOption } from "../ui/Radio";
 import { TextField } from "@mui/material";
 
 export default function ConfigCommentView() {
+  // Access the post store to get posts, selectedPostId, and updatePost function
   const { posts, selectedPostId, updatePost } = usePostStore();
+
+  // Get the currently selected post or default to the first post
   const selectedPost = posts[selectedPostId] || posts[0];
 
-  // Use global state for comment config
+  // Default values for comment type and keywords
   const selectedOption = selectedPost.commentType || "specific";
   const keywordInput = selectedPost.commentKeywords || "Price";
 
+  // Handler functions to update the post with new comment type and keywords
   const handleOptionChange = (option: string) => {
     updatePost({ commentType: option });
   };

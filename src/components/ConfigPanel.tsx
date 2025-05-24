@@ -5,6 +5,7 @@ import ConfigDMView from "./config/dm-config";
 import { NextButton } from "./ui/NextBtn";
 
 export default function ConfigPanel() {
+  // Access the post store to get the current step and next step function
   const { currentStep, nextStep } = usePostStore();
 
   return (
@@ -14,13 +15,13 @@ export default function ConfigPanel() {
         {currentStep >= 1 && <ConfigCommentView />}
         {currentStep >= 2 && <ConfigDMView />}
       </div>
-      <div className="">
-        <NextButton onClick={nextStep} />
-      </div>
+
+      <NextButton onClick={nextStep} />
     </div>
   );
 }
 
+// Wrapper component for each configuration section
 export function ConfigSection({
   title,
   children,
